@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Burger.module.scss'
+import { INGREDIENTS } from 'constants/ingredients'
 
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 
@@ -9,9 +10,9 @@ const burger = ({ ingredients }) => {
   })
   return (
     <div className={classes.burger}>
-      <BurgerIngredient type="breadTop" />
+      <BurgerIngredient type={INGREDIENTS.BREAD_TOP} />
       {transformedIngredients}
-      <BurgerIngredient type="breadBottom" />
+      <BurgerIngredient type={INGREDIENTS.BREAD_BOTTOM} />
     </div>
   )
 }
