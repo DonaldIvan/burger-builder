@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
+  ],
   env: {
     es6: true,
     node: true,
@@ -14,7 +19,7 @@ module.exports = {
   },
   ignorePatterns: ['/node_modules/**', '/build/**'],
   rules: {
-    'no-unused-vars': ['warn', { args: 'none', argsIgnorePattern: 'req|res|next|val' }],
+    'no-unused-vars': ['error', { args: 'none', argsIgnorePattern: 'req|res|next|val' }],
     'prettier/prettier': ['error'],
   },
   settings: {
