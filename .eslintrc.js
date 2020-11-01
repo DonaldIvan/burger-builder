@@ -19,8 +19,8 @@ module.exports = {
   },
   ignorePatterns: ['/node_modules/**', '/build/**'],
   rules: {
-    'no-unused-vars': ['error', { args: 'none', argsIgnorePattern: 'req|res|next|val' }],
-    'prettier/prettier': ['error'],
+    'no-unused-vars': ['warn', { args: 'none', argsIgnorePattern: 'req|res|next|val' }],
+    'prettier/prettier': ['warn'],
   },
   settings: {
     react: {
