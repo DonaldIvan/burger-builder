@@ -8,14 +8,28 @@
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --fix .",
-    "lint-check": "eslint .",
-    "prettier": "prettier --write \"./**/*.{js,jsx,json,css,scss}\""
+    "lint-check": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +58,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
     "prettier": "^2.1.2"
   }
 }
