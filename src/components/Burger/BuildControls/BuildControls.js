@@ -9,7 +9,7 @@ const controls = Object.values(INGREDIENTS).filter(
   (obj) => ![INGREDIENTS.BREAD_BOTTOM.TYPE, INGREDIENTS.BREAD_TOP.TYPE].includes(obj.TYPE),
 )
 
-const buildControls = ({ ingredientAdded, ingredientRemove, disabled, price, purchaseable }) => {
+const buildControls = ({ ingredientAdded, ingredientRemove, disabled, price, purchaseable, ordered }) => {
   return (
     <div className={styles.buildControls}>
       <p>
@@ -24,7 +24,7 @@ const buildControls = ({ ingredientAdded, ingredientRemove, disabled, price, pur
           disabled={disabled[obj.TYPE]}
         />
       ))}
-      <button className={styles.order} disabled={purchaseable}>
+      <button className={styles.order} disabled={purchaseable} onClick={ordered}>
         ORDER NOW!
       </button>
     </div>
