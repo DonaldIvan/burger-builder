@@ -9,7 +9,7 @@ const controls = Object.values(INGREDIENTS).filter(
   (obj) => ![INGREDIENTS.BREAD_BOTTOM.TYPE, INGREDIENTS.BREAD_TOP.TYPE].includes(obj.TYPE),
 )
 
-const buildControls = ({ ingredientAdded, ingredientRemove }) => {
+const buildControls = ({ ingredientAdded, ingredientRemove, disabled }) => {
   return (
     <div className={styles.buildControls}>
       {controls.map((obj) => (
@@ -18,6 +18,7 @@ const buildControls = ({ ingredientAdded, ingredientRemove }) => {
           label={obj.LABEL}
           added={() => ingredientAdded(obj.TYPE)}
           remove={() => ingredientRemove(obj.TYPE)}
+          disabled={disabled[obj.TYPE]}
         />
       ))}
     </div>
