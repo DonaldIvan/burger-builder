@@ -10,11 +10,11 @@ const controls = Object.values(INGREDIENTS).filter(
   (obj) => ![INGREDIENTS.BREAD_BOTTOM.TYPE, INGREDIENTS.BREAD_TOP.TYPE].includes(obj.TYPE),
 )
 
-const buildControls = (props) => {
+const buildControls = ({ ingredientAdded }) => {
   return (
     <div className={styles.buildControls}>
       {controls.map((obj) => (
-        <BuildControl key={obj.LABEL} label={obj.LABEL} type={obj.TYPE} />
+        <BuildControl key={obj.LABEL} label={obj.LABEL} added={() => ingredientAdded(obj.TYPE)} />
       ))}
     </div>
   )

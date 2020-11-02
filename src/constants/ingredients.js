@@ -10,17 +10,21 @@ export const INGREDIENTS = {
   MEAT: {
     LABEL: 'Meat',
     TYPE: 'meat',
+    PRICE: 1.3,
   },
   CHEESE: {
     LABEL: 'Cheese',
     TYPE: 'cheese',
+    PRICE: 0.4,
   },
   BACON: {
     LABEL: 'Bacon',
     TYPE: 'bacon',
+    PRICE: 0.7,
   },
   SALAD: {
     LABEL: 'Salad',
     TYPE: 'salad',
+    PRICE: 0.5,
   },
 }
