@@ -7,22 +7,22 @@ class BurgerIngredient extends Component {
   render() {
     const getIngredient = (ingredientType) => {
       switch (ingredientType) {
-        case INGREDIENTS.BREAD_BOTTOM:
+        case INGREDIENTS.BREAD_BOTTOM.TYPE:
           return <div className={styles.breadBottom}></div>
-        case INGREDIENTS.BREAD_TOP:
+        case INGREDIENTS.BREAD_TOP.TYPE:
           return (
             <div className={styles.breadTop}>
               <div className={styles.seeds1}></div>
               <div className={styles.seeds2}></div>
             </div>
           )
-        case INGREDIENTS.MEAT:
+        case INGREDIENTS.MEAT.TYPE:
           return <div className={styles.meat}></div>
-        case INGREDIENTS.CHEESE:
+        case INGREDIENTS.CHEESE.TYPE:
           return <div className={styles.cheese}></div>
-        case INGREDIENTS.BACON:
+        case INGREDIENTS.BACON.TYPE:
           return <div className={styles.bacon}></div>
-        case INGREDIENTS.SALAD:
+        case INGREDIENTS.SALAD.TYPE:
           return <div className={styles.salad}></div>
         default:
           return null

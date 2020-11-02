@@ -12,9 +12,9 @@ const burger = ({ ingredients }) => {
     .reduce((initial, current) => initial.concat(current), [])
   return (
     <div className={styles.burger}>
-      <BurgerIngredient type={INGREDIENTS.BREAD_TOP} />
+      <BurgerIngredient type={INGREDIENTS.BREAD_TOP.TYPE} />
       {(transformedIngredients.length && transformedIngredients) || <p>Please start adding ingredients</p>}
-      <BurgerIngredient type={INGREDIENTS.BREAD_BOTTOM} />
+      <BurgerIngredient type={INGREDIENTS.BREAD_BOTTOM.TYPE} />
     </div>
   )
 }
