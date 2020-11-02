@@ -9,9 +9,12 @@ const controls = Object.values(INGREDIENTS).filter(
   (obj) => ![INGREDIENTS.BREAD_BOTTOM.TYPE, INGREDIENTS.BREAD_TOP.TYPE].includes(obj.TYPE),
 )
 
-const buildControls = ({ ingredientAdded, ingredientRemove, disabled }) => {
+const buildControls = ({ ingredientAdded, ingredientRemove, disabled, price, purchaseable }) => {
   return (
     <div className={styles.buildControls}>
+      <p>
+        Price: <strong>{price.toFixed(2)}</strong>
+      </p>
       {controls.map((obj) => (
         <BuildControl
           key={obj.LABEL}
@@ -21,6 +24,9 @@ const buildControls = ({ ingredientAdded, ingredientRemove, disabled }) => {
           disabled={disabled[obj.TYPE]}
         />
       ))}
+      <button className={styles.order} disabled={purchaseable}>
+        ORDER NOW!
+      </button>
     </div>
   )
 }
