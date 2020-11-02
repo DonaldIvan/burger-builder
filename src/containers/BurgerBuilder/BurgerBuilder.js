@@ -28,6 +28,10 @@ class BurgerBuilder extends Component {
     this.setState({ purchasing: true })
   }
 
+  onPurchaseCancel = () => {
+    this.setState({ purchasing: false })
+  }
+
   onAddIngredient = (type) => {
     if (!type) return
     const updatedIngredients = {
@@ -67,7 +71,7 @@ class BurgerBuilder extends Component {
     }
     return (
       <Auxillary>
-        <Modal show={this.state.purchasing}>
+        <Modal show={this.state.purchasing} modalClosed={}>
           <OrderSummary ingredients={this.state.ingredients} />
         </Modal>
         <Burger ingredients={this.state.ingredients} />
