@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classes from './BurgerIngredient.module.css'
+import styles from './BurgerIngredient.module.css'
 import { INGREDIENTS } from 'constants/ingredients'
 
 class BurgerIngredient extends Component {
@@ -8,22 +8,22 @@ class BurgerIngredient extends Component {
     const getIngredient = (ingredientType) => {
       switch (ingredientType) {
         case INGREDIENTS.BREAD_BOTTOM:
-          return <div className={classes.breadBottom}></div>
+          return <div className={styles.breadBottom}></div>
         case INGREDIENTS.BREAD_TOP:
           return (
-            <div className={classes.breadTop}>
-              <div className={classes.seeds1}></div>
-              <div className={classes.seeds2}></div>
+            <div className={styles.breadTop}>
+              <div className={styles.seeds1}></div>
+              <div className={styles.seeds2}></div>
             </div>
           )
         case INGREDIENTS.MEAT:
-          return <div className={classes.meat}></div>
+          return <div className={styles.meat}></div>
         case INGREDIENTS.CHEESE:
-          return <div className={classes.cheese}></div>
+          return <div className={styles.cheese}></div>
         case INGREDIENTS.BACON:
-          return <div className={classes.bacon}></div>
+          return <div className={styles.bacon}></div>
         case INGREDIENTS.SALAD:
-          return <div className={classes.salad}></div>
+          return <div className={styles.salad}></div>
         default:
           return null
       }
