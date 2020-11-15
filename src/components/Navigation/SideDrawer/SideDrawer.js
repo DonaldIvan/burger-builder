@@ -6,7 +6,9 @@ import stlyes from './SideDrawer.module.scss'
 
 const sideDrawer = () => (
   <div className={stlyes.sideDrawer}>
-    <Logo />
+    <div className={stlyes.logo}>
+      <Logo />
+    </div>
     <nav>
       <NavigationItems />
     </nav>
