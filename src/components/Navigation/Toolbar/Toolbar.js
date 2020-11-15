@@ -3,10 +3,11 @@ import React from 'react'
 import styles from './Toolbar.module.scss'
 import Logo from 'components/Logo/Logo'
 import NavigationItems from 'components/Navigation/NavigationItems/NavigationItems'
+import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle'
 
-const toolbar = () => (
+const toolbar = ({ drawerToggleHandler }) => (
   <header className={styles.toolbar}>
-    <div>Menu</div>
+    <DrawerToggle clicked={drawerToggleHandler} />
     <div className={styles.logo}>
       <Logo />
     </div>
